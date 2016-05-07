@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>WebGLハンズオン入門 with Three.js</title>
+<style>
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #fff;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+</style>
+<script src="js/lib/three.min.js"></script>
+<script src="js/lib/OrbitControls.js"></script>
+</head>
+
+<body>
+
+<script>
+(function () {
+    'use strict';
+
+    var query = location.search.slice(1);
+
+    function loadScript(fileName) {
+        fileName = fileName || 'main';
+        var script = document.createElement('script');
+        script.src = 'js/' + fileName + '.js';
+        document.head.appendChild(script);
+    }
+
+    loadScript(query);
+}());
+</script>
+</body>
+</html>
